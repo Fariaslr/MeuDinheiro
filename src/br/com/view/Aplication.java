@@ -13,21 +13,31 @@ import javax.swing.JOptionPane;
  */
 public class Aplication {
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws InterruptedException {
         VIEWInit init = new VIEWInit();
+        int i;
         init.setVisible(true);
         try {
-            for (int i = 0; i <= 100; i += 3) {
+            for (i = 0; i <= 100; i += 3) {
 
-                Thread.sleep(140);
+                Thread.sleep(70);
                 init.progresseCarregamento.setValue(i);
 
             }
+            init.dispose();
+            VIEWMain main = new VIEWMain();
+            main.setVisible(true);
+
+            for (i = 0; i <= 5; i++) {
+                Thread.sleep(500);
+                if (i == 0) {
+
+                }
+            }
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
-        init.dispose();
-        VIEWMain main = new VIEWMain();
-        main.setVisible(true);
+
     }
 }

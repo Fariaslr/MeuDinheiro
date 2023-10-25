@@ -4,17 +4,70 @@
  */
 package br.com.view;
 
+import br.com.model.Dinheiro;
+import com.formdev.flatlaf.FlatIntelliJLaf;
+import java.awt.Color;
+import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+
 /**
  *
  * @author Lucas
  */
 public class VIEWMain extends javax.swing.JFrame {
 
+    Dinheiro dinheiro = new Dinheiro();
+
     /**
      * Creates new form VIEWMani
      */
     public VIEWMain() {
         initComponents();
+        initJTexts();
+        invisibleContainer();
+        invisibleCifrao();
+        invisibleIcon();
+        invisibleLabel();
+        invisibleText();
+    }
+
+    public void initJTexts() {
+        txtSalario.setBorder(null);
+        txtSalario.setBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, Color.GRAY));
+        txtDespesas.setBorder(null);
+        txtLazer.setBorder(null);
+        txtInvestimento.setBorder(null);
+    }
+
+    public void invisibleContainer() {
+        lblContainerDespesas.setVisible(false);
+        lblContainerLazer.setVisible(false);
+        lblContainerInvestimento.setVisible(false);
+    }
+
+    public void invisibleIcon() {
+        lblIconDespesas.setVisible(false);
+        lblIconLazer.setVisible(false);
+        lblIconInvestimento.setVisible(false);
+    }
+
+    public void invisibleCifrao() {
+        lblCifrao2.setVisible(false);
+        lblCifrao3.setVisible(false);
+        lblCifrao4.setVisible(false);
+    }
+
+    public void invisibleLabel() {
+        lblDespesas.setVisible(false);
+        lblLazer.setVisible(false);
+        lblInvestimento.setVisible(false);
+    }
+
+    public void invisibleText() {
+        txtDespesas.setVisible(false);
+        txtLazer.setVisible(false);
+        txtInvestimento.setVisible(false);
     }
 
     /**
@@ -26,63 +79,184 @@ public class VIEWMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelBackground = new javax.swing.JPanel();
+        lblIconSalario = new javax.swing.JLabel();
+        lblIconDespesas = new javax.swing.JLabel();
+        lblIconLazer = new javax.swing.JLabel();
+        lblIconInvestimento = new javax.swing.JLabel();
+        txtSalario = new javax.swing.JTextField();
+        txtDespesas = new javax.swing.JTextField();
+        txtLazer = new javax.swing.JTextField();
+        txtInvestimento = new javax.swing.JTextField();
         panelFooter = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         lblPiggyBank = new javax.swing.JLabel();
+        lblSalarioAtual = new javax.swing.JLabel();
+        lblDespesas = new javax.swing.JLabel();
+        lblLazer = new javax.swing.JLabel();
+        lblInvestimento = new javax.swing.JLabel();
+        lblCifrao2 = new javax.swing.JLabel();
+        lblCifrao1 = new javax.swing.JLabel();
+        lblCifrao3 = new javax.swing.JLabel();
+        lblCifrao4 = new javax.swing.JLabel();
+        lblContainerSalario = new javax.swing.JLabel();
+        lblContainerDespesas = new javax.swing.JLabel();
+        lblContainerLazer = new javax.swing.JLabel();
+        lblContainerInvestimento = new javax.swing.JLabel();
+        btnEnviar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        panelFooter.setBackground(new java.awt.Color(3, 139, 115));
+        panelBackground.setBackground(new java.awt.Color(3, 139, 115));
+        panelBackground.setLayout(null);
 
-        jPanel2.setBackground(new java.awt.Color(4, 130, 108));
+        lblIconSalario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/Money.png"))); // NOI18N
+        panelBackground.add(lblIconSalario);
+        lblIconSalario.setBounds(210, 90, 40, 40);
+
+        lblIconDespesas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/MoneyTransation.png"))); // NOI18N
+        panelBackground.add(lblIconDespesas);
+        lblIconDespesas.setBounds(210, 160, 32, 40);
+
+        lblIconLazer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/Summer.png"))); // NOI18N
+        panelBackground.add(lblIconLazer);
+        lblIconLazer.setBounds(210, 230, 32, 40);
+
+        lblIconInvestimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/Business.png"))); // NOI18N
+        panelBackground.add(lblIconInvestimento);
+        lblIconInvestimento.setBounds(212, 300, 30, 40);
+
+        txtSalario.setBackground(new java.awt.Color(253, 250, 250));
+        panelBackground.add(txtSalario);
+        txtSalario.setBounds(60, 107, 90, 22);
+
+        txtDespesas.setEditable(false);
+        txtDespesas.setBackground(new java.awt.Color(255, 255, 255));
+        panelBackground.add(txtDespesas);
+        txtDespesas.setBounds(60, 180, 90, 22);
+
+        txtLazer.setEditable(false);
+        txtLazer.setBackground(new java.awt.Color(255, 255, 255));
+        panelBackground.add(txtLazer);
+        txtLazer.setBounds(60, 245, 90, 22);
+        panelBackground.add(txtInvestimento);
+        txtInvestimento.setBounds(60, 317, 90, 22);
+
+        panelFooter.setBackground(new java.awt.Color(4, 130, 108));
 
         lblPiggyBank.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/PiggyBank48px.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(109, 109, 109)
-                .addComponent(lblPiggyBank)
-                .addContainerGap(113, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblPiggyBank)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
 
         javax.swing.GroupLayout panelFooterLayout = new javax.swing.GroupLayout(panelFooter);
         panelFooter.setLayout(panelFooterLayout);
         panelFooterLayout.setHorizontalGroup(
             panelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(panelFooterLayout.createSequentialGroup()
+                .addGap(109, 109, 109)
+                .addComponent(lblPiggyBank)
+                .addContainerGap(113, Short.MAX_VALUE))
         );
         panelFooterLayout.setVerticalGroup(
             panelFooterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelFooterLayout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 420, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(lblPiggyBank)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        panelBackground.add(panelFooter);
+        panelFooter.setBounds(0, 0, 270, 68);
+
+        lblSalarioAtual.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblSalarioAtual.setText("Seu salário atual?");
+        panelBackground.add(lblSalarioAtual);
+        lblSalarioAtual.setBounds(30, 90, 93, 15);
+
+        lblDespesas.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblDespesas.setText("Despesas");
+        panelBackground.add(lblDespesas);
+        lblDespesas.setBounds(30, 160, 60, 15);
+
+        lblLazer.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblLazer.setText("Lazer");
+        panelBackground.add(lblLazer);
+        lblLazer.setBounds(30, 230, 30, 15);
+
+        lblInvestimento.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblInvestimento.setText("Investimento");
+        panelBackground.add(lblInvestimento);
+        lblInvestimento.setBounds(30, 300, 80, 15);
+
+        lblCifrao2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblCifrao2.setText("R$");
+        panelBackground.add(lblCifrao2);
+        lblCifrao2.setBounds(30, 180, 24, 20);
+
+        lblCifrao1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblCifrao1.setText("R$");
+        panelBackground.add(lblCifrao1);
+        lblCifrao1.setBounds(30, 105, 25, 22);
+
+        lblCifrao3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblCifrao3.setText("R$");
+        panelBackground.add(lblCifrao3);
+        lblCifrao3.setBounds(30, 245, 24, 22);
+
+        lblCifrao4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblCifrao4.setText("R$");
+        panelBackground.add(lblCifrao4);
+        lblCifrao4.setBounds(30, 315, 30, 22);
+
+        lblContainerSalario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/Design.png"))); // NOI18N
+        panelBackground.add(lblContainerSalario);
+        lblContainerSalario.setBounds(15, 80, 240, 58);
+
+        lblContainerDespesas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/Design.png"))); // NOI18N
+        panelBackground.add(lblContainerDespesas);
+        lblContainerDespesas.setBounds(15, 150, 240, 60);
+
+        lblContainerLazer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/Design.png"))); // NOI18N
+        lblContainerLazer.setText("jLabel1");
+        panelBackground.add(lblContainerLazer);
+        lblContainerLazer.setBounds(15, 220, 240, 58);
+
+        lblContainerInvestimento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/image/Design.png"))); // NOI18N
+        panelBackground.add(lblContainerInvestimento);
+        lblContainerInvestimento.setBounds(15, 290, 240, 58);
+
+        btnEnviar.setText("Enviar");
+        btnEnviar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnviarActionPerformed(evt);
+            }
+        });
+        panelBackground.add(btnEnviar);
+        btnEnviar.setBounds(180, 510, 72, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelFooter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelBackground, javax.swing.GroupLayout.DEFAULT_SIZE, 270, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelFooter, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelBackground, javax.swing.GroupLayout.DEFAULT_SIZE, 551, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarActionPerformed
+        if (txtSalario.getText().equals("")) {
+            JOptionPane.showMessageDialog(this, "Insira um salário");
+        } else {
+            dinheiro.setSalario(Float.parseFloat(txtSalario.getText()));
+            dinheiro.administraSalario();
+            dinheiro.mostraValores();
+        }
+
+    }//GEN-LAST:event_btnEnviarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,16 +270,10 @@ public class VIEWMain extends javax.swing.JFrame {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    UIManager.setLookAndFeel(new FlatIntelliJLaf());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VIEWMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VIEWMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VIEWMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(VIEWMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
@@ -121,8 +289,29 @@ public class VIEWMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lblPiggyBank;
-    private javax.swing.JPanel panelFooter;
+    private javax.swing.JButton btnEnviar;
+    protected javax.swing.JLabel lblCifrao1;
+    private javax.swing.JLabel lblCifrao2;
+    private javax.swing.JLabel lblCifrao3;
+    private javax.swing.JLabel lblCifrao4;
+    private javax.swing.JLabel lblContainerDespesas;
+    private javax.swing.JLabel lblContainerInvestimento;
+    private javax.swing.JLabel lblContainerLazer;
+    protected javax.swing.JLabel lblContainerSalario;
+    private javax.swing.JLabel lblDespesas;
+    private javax.swing.JLabel lblIconDespesas;
+    private javax.swing.JLabel lblIconInvestimento;
+    private javax.swing.JLabel lblIconLazer;
+    private javax.swing.JLabel lblIconSalario;
+    private javax.swing.JLabel lblInvestimento;
+    private javax.swing.JLabel lblLazer;
+    protected javax.swing.JLabel lblPiggyBank;
+    protected javax.swing.JLabel lblSalarioAtual;
+    private javax.swing.JPanel panelBackground;
+    protected javax.swing.JPanel panelFooter;
+    private javax.swing.JTextField txtDespesas;
+    private javax.swing.JTextField txtInvestimento;
+    private javax.swing.JTextField txtLazer;
+    protected javax.swing.JTextField txtSalario;
     // End of variables declaration//GEN-END:variables
 }

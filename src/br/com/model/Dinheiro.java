@@ -59,6 +59,6 @@ public class Dinheiro {
     }
     
     public void mostraValores(){
-        System.out.println("R$ " + GastoFixo + " para pagar suas contas\nR$" + GastoVariavel + " para gastar com a sua necessidade\nR$ " + FundoMonetario + " para ajudar no seu pé de meia!");
+        System.out.println("R$ " + GastoFixo + " para pagar suas contas\nR$ " + GastoVariavel + " para gastar com a sua necessidade\nR$ " + FundoMonetario + " para ajudar no seu pé de meia!");
     }
 }
