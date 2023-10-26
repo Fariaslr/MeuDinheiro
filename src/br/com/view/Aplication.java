@@ -24,7 +24,7 @@ public class Aplication {
 
             }
             init.dispose();*/
-            VIEWMain main = new VIEWMain();
+            VIEWmain main = new VIEWmain();
             main.setVisible(true);
 
         /*} catch (Exception e) {
