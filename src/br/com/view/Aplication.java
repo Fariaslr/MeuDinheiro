@@ -4,6 +4,8 @@
  */
 package br.com.view;
 
+import javax.swing.JOptionPane;
+
 
 
 /**
@@ -13,7 +15,7 @@ package br.com.view;
 public class Aplication {
 
     public static void main(String args[]) {
-        /*VIEWInit init = new VIEWInit();
+        VIEWinit init = new VIEWinit();
         int i;
         init.setVisible(true);
         try {
@@ -23,13 +25,13 @@ public class Aplication {
                 init.progresseCarregamento.setValue(i);
 
             }
-            init.dispose();*/
+            init.dispose();
             VIEWmain main = new VIEWmain();
             main.setVisible(true);
 
-        /*} catch (Exception e) {
+        } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
-        }*/
+        }
 
     }
 }
